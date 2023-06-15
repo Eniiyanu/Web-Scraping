@@ -7,7 +7,11 @@ creds = ServiceAccountCredentials.from_json_keyfile_name(r"C:\Users\USER\Documen
 client = gspread.authorize(creds)
 
 
-sheet = client.open('Web_Scraping').sheet1
+# Open the Google Sheets spreadsheet
+spreadsheet = client.open('Web_Scraping')
+
+# Access the desired worksheet
+worksheet = spreadsheet.sheet1
 
 #Scraping
 keywords = ['freelance', 'climate']
