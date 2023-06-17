@@ -47,10 +47,10 @@ try:
     for job in job_listings:
         site = 'Climatebase'
         # Extract job title
-        job_title = soup.find('div', class_='ListCard__Title-sc-1dtq0w8-4 hVVEUN list_card__title').text
+        job_title = soup.find('div', class_='ListCard__Title-sc-1dtq0w8-4').text
 
 # Extract job URL
-        job_url = soup.find('a', class_='ListCard__ContainerLink-sc-1dtq0w8-0 jfVKDr list_card__featured list_card comp')['href']
+        job_url = soup.find('a', class_='ListCard__ContainerLink-sc-1dtq0w8-0')['href']
 
 # Extract location
         location = soup.find('div', class_='MetadataInfo__MetadataInfoStyle-hif7kv-1').text.strip()
