@@ -5,8 +5,11 @@
 
 import scrapy
 
+class JobItem(scrapy.Item):
+    job_title = scrapy.Field()
+    company = scrapy.Field()
+    url = scrapy.Field()
+    location = scrapy.Field()
+    description = scrapy.Field()
+    date_posted = scrapy.Field()
 
-class ImmaItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
