@@ -2,7 +2,7 @@ import scrapy
 
 
 class Imma2Spider(scrapy.Spider):
-    name = "imma2"
+    name = "globalcharity"
     allowed_domains = ["globalcharityjobs.com"]
     start_urls = ["https://globalcharityjobs.com/"]
 

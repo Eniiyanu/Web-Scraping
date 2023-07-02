@@ -1,8 +1,8 @@
 import scrapy
-from imma.items import JobItem
+from imma.items import ClimateBase
 
 class ImmaspiderSpider(scrapy.Spider):
-    name = "immaspider"
+    name = "climatebase"
     allowed_domains = ["climatebase.org"]
     start_urls = ["https://climatebase.org/jobs?"]
     keywords = ["Contract", "Freelance", "Consultant"]
@@ -19,7 +19,7 @@ class ImmaspiderSpider(scrapy.Spider):
         title = response.css('.PageLayout__Title-sc-1ri9r3s-4.fcPVcr::text').get()
         description = response.xpath('normalize-space(//*[@id="jobPageBody"]/div[9]/ul[2])').get()
         if self.has_keywords(description):
-            item = JobItem()
+            item = ClimateBase()
             item['job_title'] = response.css('.PageLayout__Title-sc-1ri9r3s-4.fcPVcr::text').get()
             item['company'] = response.css('.CompanyCard__Title-gzvdxj-3.eaAofP::text').get()
             item['url'] = response.url

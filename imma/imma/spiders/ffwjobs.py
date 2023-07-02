@@ -38,15 +38,3 @@ class FfwjobsSpider(scrapy.Spider):
         return False
 
 
-"""
-
-    yield {
-                'Job': job.css('.ListCard__Title-sc-1dtq0w8-4::text').get(),
-                'Company': job.css('div.ListCard__Title-sc-1dtq0w8-4.ListCard__Subtitle-sc-1dtq0w8-5::text').get(),
-                'URL': 'https://climatebase.org/jobs'+job.css('a').attrib['href'],
-                "Location":response.xpath('normalize-space(//*[@id="jobPageBody"]/div[3]/div/div[2]/div[1])').get()
-                "Description":response.xpath('normalize-space(//*[@id="jobPageBody"]/div[9]/ul[2]').get()
-date posted :response.css('.JobListing__Span-sc-15uyy2k-1.etpcIc::text').get()   
-            }
-
-               """

@@ -30,7 +30,15 @@ EXTENSIONS = {
 DOWNLOADER_MIDDLEWARES = {
     'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware':None,
+    'scrapy_user_agents.middlewares.RandomUserAgentMiddleware':400,
 }
+
+
+
+SCRAPEOPS_SETTINGS_EXCLUSION_LIST = [
+    'NAME_OF_SETTING_NOT_TO_LOG'
+]
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
 

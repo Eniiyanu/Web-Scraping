@@ -11,3 +11,7 @@ from itemadapter import ItemAdapter
 class ImmaPipeline:
     def process_item(self, item, spider):
         return item
+
+class IndeedPipeline:
+    def process_item(self, item, spider):
+        return item

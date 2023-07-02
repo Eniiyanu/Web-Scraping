@@ -5,7 +5,7 @@
 
 import scrapy
 
-class JobItem(scrapy.Item):
+class ClimateBase(scrapy.Item):
     job_title = scrapy.Field()
     company = scrapy.Field()
     url = scrapy.Field()
@@ -13,3 +13,16 @@ class JobItem(scrapy.Item):
     description = scrapy.Field()
     date_posted = scrapy.Field()
 
+class Unicef(scrapy.Item):
+    title = scrapy.Field()
+    location = scrapy.Field()
+    company = scrapy.Field()
+    description = scrapy.Field()
+    url = scrapy.Field()
+
+class Glassdoor(scrapy.Item):
+    title = scrapy.Field()
+    location = scrapy.Field()
+    company = scrapy.Field()
+    description = scrapy.Field()
+    url = scrapy.Field()
